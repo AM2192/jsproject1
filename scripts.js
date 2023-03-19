@@ -45,7 +45,7 @@ for (i = 0; i < close.length; i++) {
         div.style.display = "none";
     }
 }
-// this should create checked mark when item is clicked. 
+// this creates checked mark when item is clicked. 
 var list = document.getElementById('doUL');
 list.addEventListener('click', function(e) {
     var li = e.target;
