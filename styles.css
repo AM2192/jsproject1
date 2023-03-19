@@ -36,7 +36,7 @@ body{
     background-color: #4fc3dc;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px #7c7b7b;
   }
   .button:hover {background-color: #ff2d75
 } 
@@ -102,7 +102,7 @@ ul li.checked {
     background-color: #4fc3dc;
     border: none;
     border-radius: 15px;
-    box-shadow: 0 9px #999;
+    box-shadow: 0 9px #7c7b7b;
  }
  .addBtn:hover {
     background-color: #ff2d75;
