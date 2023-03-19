@@ -21,6 +21,8 @@ function newElement() {
         li.setAttribute('id', 'listItem');
         document.getElementById("doUL").appendChild(li);
         li.append(t);
+        //this saves item to local storage
+        saveItem(inputValue);
     }
      //this combination creates close button and adds fuctionality to delete item from list
     document.getElementById("myInput").value = "";
@@ -44,6 +46,7 @@ for (i = 0; i < close.length; i++) {
         var div = this.parentElement;
         div.style.display = "none";
     }
+  
 }
 // this creates checked mark when item is clicked. 
 var list = document.getElementById('doUL');
@@ -57,6 +60,31 @@ list.addEventListener('click', function(e) {
     }
    list.removeAttribute('class');
 }, false);
+
+//this function saves items to browsers local storage
+function saveItem(doUL) {
+    var itemsOnList = document.getElementById('doUL').value;
+    if (localStorage.getItem('itemsOnList') === null) {
+        itemsOnList = [];
+    } else {
+        itemsOnList = JSON.parse(localStorage.getItem('itemsOnList'));
+    }
+    itemsOnList.push(doUL);
+
+    localStorage.setItem('itemsOnList', JSON.stringify(itemsOnList));
+}
+// this function removes all items on local storage
+function resetAll() {
+    if (localStorage.length > 0) {
+        document.getElementById('doUL').innerHTML = '';
+        localStorage.clear();
+        
+    } else {
+        alert("No items on list!")
+    }
+}
+
+
 
 
 
