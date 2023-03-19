@@ -46,17 +46,17 @@ for (i = 0; i < close.length; i++) {
     }
 }
 // this should create checked mark when item is clicked. I am working on it
-//var list = document.getElementById('listItem');
-//list.addEventListener('click', function(ev) {
-  //  var li = e.target;
-   // if (li.classList.contains('checked')) {
-        //li.classList.remove('checked');
-   // } else {
-    //    li.classList.add('checked');
+var list = document.getElementById('doUL');
+list.addEventListener('click', function(e) {
+    var li = e.target;
+    if (li.classList.contains('checked')) {
+        li.classList.remove('checked');
+    } else {
+        li.classList.add('checked');
         
-   // }
- //  list.removeAttribute('class');
-//}, false);
+    }
+   list.removeAttribute('class');
+}, false);
 
 
 
